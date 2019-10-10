@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Index</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+      
+      overflow-x: auto;
+    }
+        #b{
+      background-color: green;
+      color: white;
+      size: 40px;
+      border: 0px;
+    }
+    h1{
+      color: white;
+      opacity: 2;
+    }
+    
+    button{
+      border-radius: 100%;
+    }
+    h2{
+      color: white;
+    }
+    #p{
+      font-size: 50px;
+      text-align: center;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    #k{
+      color: white;
+      text-align: center;
+      font-size: 16px;
+      font-family: Cosmos sans MS;
+    }
+    span{
+      padding-left: 15px;
+    }
+    #navbarDropdown{
+      text-align: right;
+    }
+    #t{
+      color: white;
+    }
+  </style>
+</head>
+<!--<body background="https://www.templatemonster.com/blog/wp-content/uploads/2017/06/books.jpg">-->
+  <body background="assets/img12.jpg">
+
+<div class="container-fluid">
+<nav class="navbar navbar-expand-lg  navbar-right">
+  
+ 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="navbar-brand" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!--<li >
+        <a id="t" class="navbar-brand" routerLink="/technology">Technologies</a>
+      </li>-->
+      
+      
+      <li><form class="navbar-form" >
+        <div class="input-group">
+          
+          <input type="text" class="form-control" placeholder="Search" name="search">
+          <div class="input-group-btn">
+            <button class="btn btn-default" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button><span>   </span>
+            <a routerLink="/signin"><button class="btn btn-success" >Login</button></a>
+            <span>   </span>
+           <a routerLink="/signup"> <button class="btn btn-success">Signup</button></a>
+          </div>
+        </div>
+      </form></li>
+    
+    </ul>
+    
+    
+  
+      
+    
+    
+  </div>
+</nav></div>
+<div>
+
+  
+    
+    <br>
+    <br><br><br><br>
+    <h1 id="p">Welcome to Mentor-on-Demand</h1>
+    <p id="k">We bring ideas to life through thoughtful, creative design solutions</p><br><br><br><br><br>
+    <!--<div class="search">
+        <form class="navbar-form" >
+            <div class="input-group">
+              <div class = "col-md-4" > 
+              <input type="date"  [(ngModel)]="startDate" class="form-control" placeholder="Start Date" name="startDate"></div>
+              <div class="col-md-4"><input type="date" [(ngModel)]="endDate" class="form-control" placeholder="End Date" name="endDate"></div>
+              <div class="col-md-4">
+                <button (click)='search(startDate,endDate)' class="btn btn-default" type="submit">
+                  <i class="glyphicon glyphicon-search"></i>
+                </button><span>   </span>
+              </div> 
+            </div> 
+        </form>
+    </div>-->
+  
+  
+  <!--<p align="center">
+    <img align="center" src="https://standards.ieee.org/content/dam/ieee-standards/standards/web/visuals/images/industry_consortium_engineering_thumb.jpg" style="width: 800px; height: 300px"></p>-->
+    <div class="container text-center">
+ <div class="col-md-4">
+   <button routerLink="/signin"><img src="https://cdn2.iconfinder.com/data/icons/website-icons/512/User_Avatar-512.png" style="height: 200px; width: 200px;"></button>
+   <h4 style="color: white;">User Login</h4>
+ </div>
+ <div class="col-md-4">
+    <button routerLink="/mlogin"><img src="https://icon-library.net/images/teacher-icon-png/teacher-icon-png-13.jpg" style="height: 200px; width: 200px;"></button>
+   <h4 style="color: white;">Mentor Login</h4>
+  </div>
+  <div class="col-md-4">
+      <button routerLink="/main"><img src="https://yinnepal.files.wordpress.com/2017/11/admin.png" style="border-radius: 50%; height: 200px; width: 200px;"></button>
+   <h4 style="color: white;">Admin Login</h4>
+  </div></div>
+</div>
+
+
+
+<br>
+<br>
+
+
+</body>
+</html>

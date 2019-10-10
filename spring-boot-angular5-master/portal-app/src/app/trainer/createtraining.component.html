@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: repeat;
+      background-size: 200%;
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      
+      
+    }
+  
+ 
+    
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+input{
+  text-align: center;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+
+
+#login{
+  /*max-width:500px;*/
+  
+  /*background-color: rgb(196, 181, 181);*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container ">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <h2 class="text-center"style="color: white;">Add Course</h2><br><hr>
+      <form>
+
+         <div class="col-md-2">
+              <label>Start Date</label></div>
+            <div class="col-md-4">
+              <input type="dateTime" [(ngModel)]="training.startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+            </div>
+        
+    <div class="col-md-2">
+              <label >EndDate</label></div>
+            <div class="col-md-4">
+              <input type="dateTime" [(ngModel)]="training.endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+            </div>
+           <br><br><br>
+            <div class="col-md-2">
+                    <label>Start Time</label></div>
+                    <div class="col-md-4">
+                <input type="datetime" [(ngModel)]="training.startTime" placeholder="startTime" name="startTime" class="form-control" id="startTime">
+              </div>
+        
+            <div class="col-md-2">
+                    <label>End Time</label></div>
+                    <div class="col-md-4">
+                      <input type="datetime" [(ngModel)]="training.endTime" placeholder="endTime" name="endTime" class="form-control" id="endTime">
+                    </div><br><br><br>
+                  
+              <div class="col-md-2">
+                    <label>Mentor Id</label></div>
+                    <div class="col-md-4">
+                      <input type="text" [(ngModel)]="training.mentor.id" placeholder="mentorId" name="mentorId" class="form-control" id="mentorId">
+                    </div>
+                    
+                    <div class="col-md-2">
+                            <label>Skill Id</label></div>
+                            <div class="col-md-4">
+                              <input type="number" [(ngModel)]="training.skillId" placeholder="skillId" name="skillId" class="form-control" id="skillId">
+                            </div><br><br><br>
+                           
+                            <div class="col-md-2">
+                                    <label>Fees</label></div>
+                                    <div class="col-md-4">
+                              <input type="number" [(ngModel)]="training.fees" placeholder="fees" name="training.fees" class="form-control" id="fees">
+                            </div>
+                            <div class="col-md-2">
+                                    <label>Technology</label></div>
+                            <div class="col-md-4">
+                                    <select   class="browser-default custom-select" [(ngModel)]="training.technology.id" name="id">
+                                <option value="" selected>--Select--</option>
+                                <option *ngFor="let tech of technology"  value="{{tech.id}}">{{tech.techName}}</option>
+                                
+                            </select>
+                            </div>
+                            
+        
+        <br><br><br>
+          <button class="btn btn-success" (click)="createTraining()">Create</button><br><br>
+        </form>
+  </div><div class="col-md-1"></div></div>
+</div>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+</body>
+</html>
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: repeat;
+      background-size: 200%;
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      
+      
+    }
+  
+ 
+    
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+input{
+  text-align: center;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+
+
+#login{
+  max-width:500px;
+  
+  /*background-color: rgb(196, 181, 181);*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <h2 class="text-center"style="color: white;">Add Course</h2><br><hr>
+      <form>
+
+          <div class="form-group">
+            
+              <input [(ngModel)]="training.progress" placeholder="progress" name="progress" class="form-control" id="progress">
+            </div>
+        
+            <div class="form-group">
+                
+                <input [(ngModel)]="training.commissionAmount" placeholder="commissionAmount" name="commissionAmount" class="form-control" id="commissionAmount">
+              </div>
+        
+          <div class="form-group">
+           
+            <input [(ngModel)]="training.rating" placeholder="rating" name="rating" class="form-control" id="rating">
+          </div>
+        
+          
+        
+          <div class="form-group">
+              
+              <input type="dateTime" [(ngModel)]="training.startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+            </div>
+        
+          <div class="form-group">
+              
+              <input type="dateTime" [(ngModel)]="training.endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+            </div>
+           
+            <div class="form-group">
+                
+                <input type="datetime" [(ngModel)]="training.startTime" placeholder="startTime" name="startTime" class="form-control" id="startTime">
+              </div>
+        
+              <div class="form-group">
+                  
+                  <input type="datetime" [(ngModel)]="training.endTime" placeholder="endTime" name="endTime" class="form-control" id="endTime">
+                </div>
+                <div class="form-group">
+                   
+                    <input type="number" [(ngModel)]="training.amountReceived" placeholder="amountReceived" name="amountReceived" class="form-control" id="amountReceived">
+                  </div> 
+                  <div class="form-group">
+                      
+                      <input type="number" [(ngModel)]="training.mentor.id" placeholder="mentorId" name="mentorId" class="form-control" id="mentorId">
+                    </div>
+                    <div class="form-group">
+                        
+                        <input type="number" [(ngModel)]="training.amountToMentor" placeholder="amountToMentor" name="amountToMentor" class="form-control" id="amountToMentor">
+                      </div>
+        
+                      <div class="form-group">
+                          
+                          <input type="number" [(ngModel)]="training.userId" placeholder="userId" name="userId" class="form-control" id="userId">
+                        </div> 
+                        
+                          <div class="form-group">
+                              
+                              <input type="number" [(ngModel)]="training.skillId" placeholder="skillId" name="skillId" class="form-control" id="skillId">
+                            </div>
+                           
+                            <div class="form-group">
+                              
+                              <input type="number" [(ngModel)]="training.fees" placeholder="fees" name="fees" class="form-control" id="fees">
+                            </div>
+                            <div class="form-group">
+                              
+                              <input type="string" [(ngModel)]="training.status" placeholder="status" name="status" class="form-control" id="status">
+                            </div>
+                            <div class="col-md-2">
+                              <label>Technology</label></div>
+                      <div class="col-md-4">
+                              <select class="form-control" [(ngModel)]="training.technology.id" name="technologyId">
+                                      <option selected>Technologies</option>
+                                      <option *ngFor="let technology of technology"  value="{{technology.id}}">{{technology.techName}}</option>
+                                      
+                                    </select>
+
+                                   <select name="technologyField" [(ngModel)]="addTraining.technology.technologyId" >
+                                        <option value="">--Select--</option>
+                                        <option *ngFor="let tech of technologyList" value="{{tech.technologyId}}">{{tech.techName}}</option>
+                                        </select>
+                      </div>
+                            
+        
+        
+          <button class="btn btn-success" (click)="createTraining()">Create</button><br><br>
+        </form>
+  </div><div class="col-md-1"></div></div>
+</div>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: repeat;
+      background-size: 200%;
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      
+      
+    }
+  
+ 
+    
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+input{
+  text-align: center;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+::placeholder{
+  color: black;
+  text-align: center;
+}
+
+
+#login{
+  max-width:500px;
+  
+  /*background-color: rgb(196, 181, 181);*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <h2 class="text-center"style="color: white;">Add Course</h2><br><hr>
+      <form>
+
+          <div class="form-group">
+            
+              <input [(ngModel)]="training.progress" placeholder="progress" name="progress" class="form-control" id="progress">
+            </div>
+        
+            <div class="form-group">
+                
+                <input [(ngModel)]="training.commissionAmount" placeholder="commissionAmount" name="commissionAmount" class="form-control" id="commissionAmount">
+              </div>
+        
+          <div class="form-group">
+           
+            <input [(ngModel)]="training.rating" placeholder="rating" name="rating" class="form-control" id="rating">
+          </div>
+        
+          
+        
+          <div class="form-group">
+              
+              <input type="dateTime" [(ngModel)]="training.startDate" placeholder="startDate" name="startDate" class="form-control" id="startDate">
+            </div>
+        
+          <div class="form-group">
+              
+              <input type="dateTime" [(ngModel)]="training.endDate" placeholder="endDate" name="endDate" class="form-control" id="endDate">
+            </div>
+           
+            <div class="form-group">
+                
+                <input type="datetime" [(ngModel)]="training.startTime" placeholder="startTime" name="startTime" class="form-control" id="startTime">
+              </div>
+        
+              <div class="form-group">
+                  
+                  <input type="datetime" [(ngModel)]="training.endTime" placeholder="endTime" name="endTime" class="form-control" id="endTime">
+                </div>
+                <div class="form-group">
+                   
+                    <input type="number" [(ngModel)]="training.amountReceived" placeholder="amountReceived" name="amountReceived" class="form-control" id="amountReceived">
+                  </div> 
+                  <div class="form-group">
+                      
+                      <input style="color: black;" type="number" [(ngModel)]="training.mentor.id" value="{{this.mdata.id}}" placeholder="{{this.mdata.id}}" name="mentorId" class="form-control" >
+                  </div>
+                  <div class="form-group">
+                        
+                  <input type="number" [(ngModel)]="training.amountToMentor" placeholder="amountToMentor" name="amountToMentor" class="form-control" id="amountToMentor">
+                  </div>
+        
+                      <div class="form-group">
+                          
+                          <input type="number" [(ngModel)]="training.userId" placeholder="userId" name="userId" class="form-control" id="userId">
+                        </div> 
+                        
+                          <div class="form-group">
+                              
+                              <input type="number" [(ngModel)]="training.skillId" placeholder="skillId" name="skillId" class="form-control" id="skillId">
+                            </div>
+                           
+                            <div class="form-group">
+                              
+                              <input type="number" [(ngModel)]="training.fees" placeholder="fees" name="fees" class="form-control" id="fees">
+                            </div>
+                            <div class="form-group">
+                              
+                              <input type="string" [(ngModel)]="training.status" placeholder="status" name="status" class="form-control" id="status">
+                            </div>
+                          
+                            <select   class="browser-default custom-select" [(ngModel)]="training.technology.id" name="id">
+                                <option value="" selected>--Select--</option>
+                                <option *ngFor="let tech of technology"  value="{{tech.id}}">{{tech.techName}}</option>
+                                
+                            </select>
+                            
+        
+        
+          <button class="btn btn-success" (click)="createTraining()">Create</button><br><br>
+        </form>
+  </div><div class="col-md-1"></div></div>
+</div>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+</body>
+</html>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

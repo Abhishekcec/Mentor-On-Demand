@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: fixed;
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      }
+  
+ 
+
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+
+#login{
+  width:400px;
+  
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <h2 style="color: white;" class="text-center">Add Technology</h2>
+      <form>
+          <div class="form-group">
+           
+            <input type="text" [(ngModel)]="technology.techName" placeholder="Tech Name" name="techName" class="form-control" id="techName"><br>
+          </div>
+        
+          <div class="form-group">
+           
+            <input [(ngModel)]="technology.description" placeholder="Description" name="description" class="form-control" id="description"><br>
+          </div>
+        
+          
+        
+          <button class="btn btn-success" (click)="createTechnology()">Create</button><br><br>
+        </form>
+  </div><br><br>
+  </div>
+</div><br><br><br><br><br>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+

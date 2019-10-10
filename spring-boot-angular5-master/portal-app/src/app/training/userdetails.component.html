@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: repeat;
+      background-size: 100%;
+      height: 300vh;
+      background-image: url("https://cdn.pixabay.com/photo/2016/10/22/01/54/wood-1759566_960_720.jpg");}
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+table {
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  font-size: 17px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  
+}
+
+th{
+  color: white;
+  text-align: center;
+}
+
+td{
+ /*background-color: rgb(21, 141, 240);*/
+ color: white;
+ text-align: center;
+}
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" text-center">    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+ 
+  <h2> Training Details</h2>
+  <br>
+  <div class = "container" style="overflow-x: auto;">
+  <table class="table" >
+    <thead>
+      <tr>
+        <th >Id</th> 
+        <th>progress</th>
+        
+        <th>rating</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        
+       
+  
+       
+        <th>Skill Name</th>
+        <th>Tech. Name</th>
+        <th>fees</th>
+        <th>status</th>
+  
+         
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let training of training">
+            <td >{{training.id}}</td>
+            <td>{{training.progress}}</td>
+            
+            <td>{{training.rating}}</td>
+            <td>{{training.startDate}} {{training.startTime}}</td>
+            <td>{{training.endDate}} {{training.endTime}}</td>
+            
+            
+            
+            <td><span *ngFor="let skill of training.skills">{{skill.name}}</span></td>
+            <td>{{training.technology.techName}}</td>
+            <td>{{training.fees}}</td>
+            <td>{{training.status}}</td>
+            
+                </tr>
+          </tbody>
+  </table></div>
+  <br>
+  <div class = "container" style="overflow-x: auto;">
+    <h2>User Details</h2><br>
+    <table class="table ">  
+      <tbody >
+          <tr >
+            
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Contact Number</th>
+                <th>Regestration Code</th>
+                <th>Role</th>
+                <th>LinkedIn URL</th>
+                
+                
+              </tr>
+              <tr >
+                <td>{{users.id}}</td>
+                <td>{{users.firstName}}</td>
+                <td>{{users.lastName}}</td>
+               
+                <td>{{users.email}}</td>
+                <td>{{users.contactNumber}}</td>
+                <td>{{users.regCode}}</td>
+                <td>{{users.role}}</td>
+                <td>{{users.linkedinUrl}}</td>
+              
+               
+             
+          </tr>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <div class = "container" style="overflow-x: auto;">
+  <h2>Payment Details</h2>
+  <table class="table ">
+      <tbody *ngFor="let training of training">
+            <tr>
+              <th class="hidden">Id</th>
+              <th>Transaction Type</th>
+              <th>Amount</th>
+              <th>Remarks</th>
+              <th>Mentor Id</th>
+              <th>Training Id</th>
+              <th>PaymentType</th>
+              
+              <th>User Id</th>
+            </tr>
+            <tr *ngFor="let payment of training.payment">
+              <td class="hidden">{{payment.id}}</td>
+              <td>{{payment.txnType}}</td>
+              <td>{{payment.amount}}</td>
+              <td>{{payment.remarks}}</td>
+              <td>{{payment.mentorId}}</td>
+              <td>{{payment.trainingId}}</td>
+              <td>{{payment.paymentType}}</td>
+              <td>{{payment.userId}}</td>
+            
+        </tr>
+  </tbody>
+</table>
+  </div>
+  <br>
+  <h2>Mentor Details</h2>
+  <div class = "container" style="overflow-x: auto;">
+    <table class="table ">
+        <thead>
+            <tr >
+              <th>Id</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Username</th>
+              <th>Password</th>
+              <th>Email</th>
+              <th>Contact Number</th>
+              <th>Reg. Code</th>
+              <th>Role</th>
+              <th>LinkedIn URL</th>
+              <th>Years of Experience</th>
+              
+              <th>rating</th>
+              <th>timeZone</th>
+              <th>mentorProfile</th>
+            </tr>
+            </thead>
+            <tbody >
+            <tr *ngFor="let training of training">
+              <td>{{training.mentor.id}}</td>
+              <td>{{training.mentor.firstName}}</td>
+              <td>{{training.mentor.lastName}}</td>
+              <td>{{training.mentor.userName}}</td>
+              <td>{{training.mentor.password}}</td>
+              <td>{{training.mentor.email}}</td>
+              <td>{{training.mentor.contactNumber}}</td>
+              <td>{{training.mentor.regCode}}</td>
+              <td>{{training.mentor.role}}</td>
+              <td>{{training.mentor.linkedinUrl}}</td>
+              <td>{{training.mentor.yearsofExperience}}</td>
+              
+              <td>{{training.mentor.rating}}</td>
+              <td>{{training.mentor.timeZone}}</td>
+              <td>{{training.mentor.mentorProfile}}</td>
+              
+            </tr>
+            </tbody>
+    </table><br>
+    <h2>Technology Details</h2><br><table class="table ">
+      <tbody >
+          <tr>
+            <th>&nbsp;&nbsp;Id&nbsp;&nbsp;&nbsp;</th>
+            <th align="center">Technology Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+            <th>Description&nbsp;&nbsp;</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+           
+          </tr>
+        
+          <tr *ngFor="let training of training">
+            <td>{{training.technology.id}}</td>
+            <td>{{training.technology.techName}}</td>
+            <td>{{training.technology.description}}</td>
+            <td>{{training.technology.createdAt | date}}</td>
+            <td>{{training.technology.updatedAt | date}}</td>
+            </tr>
+          </tbody>
+  </table><br><h2>Skill Details</h2><br>
+  <table class="table ">
+    <tbody *ngFor="let training of training">
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Prerequisites</th>
+          <th>TOC</th>
+          <th>Created At</th>
+          <th>Updated At</th>
+        
+        </tr>
+        
+        <tr *ngFor="let skill of training.skills">
+          <td>{{skill.id}}</td>
+          <td>{{skill.name}}</td>
+          <td>{{skill.prerequisites}}</td>
+          <td>{{skill.toc}}</td>
+          <td>{{skill.createdAt | date}}</td>
+          <td>{{skill.updatedAt | date}}</td>
+          </tr>
+        </tbody>
+</table></div>
+  <br>
+  <br>
+  <hr>
+  
+  </div>
+  <br>
+  <br>
+  <br>
+  </body>
+  </html>
+
+
+
+
+
+

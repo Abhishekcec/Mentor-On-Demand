@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: fixed;
+      /*background-image: linear-gradient(-90deg, rgb(68, 8, 233), rgb(228, 43, 235));*/
+      /*background-image: linear-gradient(to right, yellow, #009966);*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+     }
+  
+ 
+
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+
+#login{
+  max-width:500px;
+  height: 700px;
+  background-color: rgb(210, 200, 211);
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ border: 20px;
+
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class = "container text-center" id="login">
+      <h2 style="color: white;" class="text-center">Add Payment</h2>
+      <form>
+
+          <div class="form-group">
+              <label for="txnType">txnType:</label>
+              <input [(ngModel)]="payment.txnType" placeholder="txnType" name="txnType" class="form-control" id="txnType">
+            </div>
+        
+            <div class="form-group">
+                <label for="amount">amount:</label>
+                <input [(ngModel)]="payment.amount" placeholder="amount" name="amount" class="form-control" id="amount">
+              </div>
+        
+          <div class="form-group">
+            <label for="rating">remarks:</label>
+            <input [(ngModel)]="payment.remarks" placeholder="remarks" name="remarks" class="form-control" id="remarks">
+          </div>
+        
+          
+        
+          <div class="form-group">
+              <label for="mentorId">mentorId</label>
+              <input type="mentorId" [(ngModel)]="payment.mentorId" placeholder="mentorId" name="mentorId" class="form-control" id="mentorId">
+            </div>
+        
+          <div class="form-group">
+              <label for="trainingId">trainingId</label>
+              <input type="trainingId" [(ngModel)]="payment.trainingId" placeholder="trainingId" name="trainingId" class="form-control" id="trainingId">
+            </div>
+           
+            <div class="form-group">
+                <label for="paymentType">paymentType:</label>
+                <input type="paymentType" [(ngModel)]="payment.paymentType" placeholder="paymentType" name="paymentType" class="form-control" id="startTime">
+              </div>
+              
+              
+          <button class="btn btn-success" (click)="createPayment()">Create</button>
+        </form>  </div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+

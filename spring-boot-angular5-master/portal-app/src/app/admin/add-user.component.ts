@@ -1,0 +1,26 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+
+import { User } from '../models/user.model';
+import { AdminService } from './admin.service';
+
+@Component({
+  templateUrl: './add-user.component.html'
+})
+export class AddUserComponent {
+
+  user: User = new User();
+
+  constructor(private router: Router, private adminService: AdminService) {
+
+  }
+
+  createUser(): void {
+    this.adminService.createUser(this.user)
+        .subscribe( data => {
+          alert("User created successfully.");
+        });
+
+  };
+
+}

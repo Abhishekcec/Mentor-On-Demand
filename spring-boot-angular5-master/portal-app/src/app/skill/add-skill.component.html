@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: repeat;
+      background-size: 200%;
+      
+      /*background-image: linear-gradient(-90deg, rgb(68, 8, 233), rgb(228, 43, 235));*/
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      /*background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/best-background-color-6.jpg");*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      
+    }
+  
+ 
+
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+
+    
+div.content {
+ 
+  height: 1000px;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+input{
+  box-align: center;
+  
+  
+}
+
+#login{
+  align-content: center;
+  width:400px;
+ 
+  /*background-color: rgb(210, 200, 211);*/
+ /* background-image: url("https://www.jakpost.travel/wimages/large/10-103094_gradient-wallpaper-hd-gradient-wallpaper-background-color.jpg");*/
+ /*background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");*/
+ background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  <div class="container text-center" id="login">
+  <div class="col-md-1"></div>
+  <div class = "col-md-10" >
+      <h2 style="color: white;" class="text-center">Add Skill</h2><br>
+      <form align="center">
+          <div class="form-group">
+            
+            <input type="name" [(ngModel)]="skill.name" placeholder="Name" name="name" class="form-control" id="name">
+          </div>
+        
+          <div class="form-group">
+            
+            <input [(ngModel)]="skill.toc" placeholder="Table of Contents" name="toc" class="form-control" id="toc">
+          </div>
+        
+          <div class="form-group">
+            
+            <input [(ngModel)]="skill.prerequisites" placeholder="Prerequisite" name="prerequisite" class="form-control" id="prerequisite">
+          </div>
+          <!--<div class="form-group">
+            
+            <input type ="datetime" [(ngModel)]="skill.createdAt" placeholder="Created Date" name="createdAt" class="form-control" id="createdAt">
+          </div>
+        
+          <div class="form-group">
+            
+            <input  type="datetime" [(ngModel)]="skill.updatedAt" placeholder="Updated Date" name="updatedAt" class="form-control" id="updatedAt">
+          </div> -->
+        
+         
+        <br>
+          <button class="btn btn-success" (click)="createSkill()">Create</button><br><br>
+        </form>
+  </div>
+  <br>
+  <br>
+
+  <div class="col-md-1"></div>
+</div>
+<br><br><br><br><br>
+
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+
+</div>
+
+</body>
+</html>
+
+
+

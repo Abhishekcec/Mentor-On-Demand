@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 120vh;
+      
+      
+    }
+   
+    h3{
+      color: rgb(21, 4, 80);
+    }
+    h4{
+      color: rgb(21, 4, 80);
+    }
+    #b{
+      color: white;
+    }
+    #a{
+      color: white;
+    }
+    
+    
+    #login{
+  align-content: center;
+  width:400px;
+ 
+  opacity: 1;
+ /*background-image: url("https://axisinteriors.net/wp-content/uploads/2018/08/what-we-do-background.jpeg");*/
+ background-color: white;
+ 
+ opacity: 1;
+  border: 1px;
+}
+input{
+      
+      text-align: center;
+      border-radius: 50px;
+      background-color: rgb(142, 228, 142);
+      color: rgb(26, 12, 77);
+      border-block-color: rgb(6, 6, 63);
+      border-width: 2px;
+      
+    }
+    ::placeholder{
+      color: rgb(96, 21, 182);
+    }</style>
+</head>
+<body id="q" background="http://crackedgames.co/wp-content/uploads/2018/12/solid-green-wallpaper-plain-colors-wallpapers-plain-green-wallpaper-plain-colors-wallpapers-download-plain-colors-wallpapers-solid-green-color-wallpaper-solid-green-background-images.jpg">
+<br>
+<div id="a">
+    <h4 align="right"><a id = "a" routerLink="/signin">User login click here&nbsp;</a></h4>
+  <h4 align="right"><a id = "a" routerLink="/main">Admin login click here &nbsp;</a></h4>
+</div>
+
+
+<!--<div class="container text-center">-->
+ 
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <form >
+        <br>
+        <h3 align="center">Login for Mentor</h3>
+        <img src="assets/logo.jpg">
+        <div class="form-group">
+          
+          <input  type="text" [(ngModel)]="mlogin.userName" name="userName" id="userName" placeholder="  Enter email" style="width:300px; height: 35px;">
+        </div>
+        <div class="form-group">
+          
+          <input  input  type="password" [(ngModel)]="mlogin.password" name="password" id="password" placeholder="  Enter password" style="width:300px; height: 35px;">
+        </div>
+      <br>
+        <div  style="background-color: transparent;">
+          <button class="btn btn-success" (click)='authenticate(mlogin.userName,mlogin.password)' >Login</button><br><br>
+          <span class="psw"><a routerLink="/msignup"><b>New user? click here</b></a></span>
+        </div>
+        
+        <br>
+        <a id="b" routerLink="/msignup">New user? click here</a>
+        <br><br>
+      </form>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+</body> 
+</html>

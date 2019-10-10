@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<!--<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-size: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 100vh;
+    }
+    h3{
+      color: white;
+    }
+    h4{
+      color: white;
+    }
+    #b{
+      color: white;
+    }
+    #a{
+      color: white;
+    }
+    #q{
+      size: 50px;
+    }
+  </style>
+</head>
+<body background="assets/img.jpg">
+  
+  <div id="a">
+      <h4 align="right"><a id = "a" routerLink="/signin">User Login click here  &nbsp;</a></h4>
+      <h4 align="right"><a id = "a" routerLink="/mlogin">Mentor Login click here</a></h4>
+    </div>
+<div class="container text-center">
+    <h3 align="center">Welcome to Mentor on Demand</h3>
+    <h3 align="center">Login for Admin</h3>
+    !--https://icon-library.net/images/admin-login-icon/admin-login-icon-15.jpg
+  <img id='q' src="assets/img3.jpg" ><br><br>
+  <br>
+  <form >
+    <div class="form-group">
+      !--<label for="email">Email:</label>--
+      <input type="text" name="usr" id="usr" (input)='usr=$event.target.value' placeholder="  Enter email" style="width: 600px; height: 40px;">
+    </div>
+    <div class="form-group">
+      !---<label for="pwd">Password:</label>--
+      <input type="password" name="pwd" id="pwd" (input)='pwd=$event.target.value'placeholder="  Enter password" style="width: 600px; height: 40px;">
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"> Remember me</label><br>
+      <button align = "center" type="submit" on-click='validate()' class="btn btn-default" >SignIn</button>
+    </div>
+
+    <h4><a id="b" routerLink="/signup">New user? click here</a></h4>
+  </form>
+</div>
+<br>
+
+
+
+</body> 
+</html>-->
+<!--<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-size: fixed;
+      background-repeat: no-repeat;
+      background-size: cover;
+      opacity: 1;
+    }
+    h2{
+      color: white;
+    }
+    h1{
+      color: white;
+    }
+    #b{
+      color: white;
+    }
+    #a{
+      color: white;
+    }
+  </style>
+</head>
+<body background="assets/img.jpg">
+  
+<div id="a">
+  <h4 align="right"><a id = "a" routerLink="/main">Admin login click here</a></h4>
+  <h4 align="right"><a id = "a" routerLink="/signin">User login click here&nbsp;</a></h4>
+  
+  <h2 align="center">Welcome to Mentor-On-Demand</h2>
+</div>
+
+<h2 align="center">Login for Mentor</h2>
+<div class="container text-center">
+  <img src="assets/img5.jpg">
+  <br><br>
+  <form >
+    <div class="form-group">
+      
+      <input  type="text" [(ngModel)]="mlogin.userName" name="userName" id="userName" placeholder="  Enter email" style="width: 600px; height: 40px;">
+    </div>
+    <div class="form-group">
+   
+      <input  type="password" [(ngModel)]="mlogin.password" name="password" id="password" placeholder="  Enter password" style="width: 600px; height: 40px;">
+    </div>
+   
+    <div class="container" style="background-color: transparent;">
+			<button class="loginbtn" (click)='authenticate(mlogin.userName,mlogin.password)' >Login</button><br><br>
+			<span class="psw"><a routerLink="/signup"><b>Forgot password?/Signup</b></a></span>
+		</div>
+    
+    <br>
+    <a id="b" routerLink="/signup">New user? click here</a>
+  </form>
+</div>
+<br>
+
+
+</body> 
+</html>-->
+
+
+
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 120vh;
+      
+      
+    }
+   
+    h3{
+      color: rgb(21, 4, 80);
+    }
+    h4{
+      color: rgb(21, 4, 80);
+    }
+    #b{
+      color: white;
+    }
+    #a{
+      color: white;
+    }
+    
+    
+    #login{
+  align-content: center;
+  width:400px;
+ 
+  opacity: 1;
+ /*background-image: url("https://axisinteriors.net/wp-content/uploads/2018/08/what-we-do-background.jpeg");*/
+ background-color: white;
+ 
+ opacity: 1;
+  border: 1px;
+}
+    input{
+      
+      text-align: center;
+      border-radius: 50px;
+      background-color: rgb(240, 184, 240);
+      color: rgb(16, 4, 59);
+      border-block-color: rgb(6, 6, 63);
+      border-width: 2px;
+      
+    }
+    ::placeholder{
+      color: rgb(33, 8, 61);
+    }
+  </style>
+</head>
+<body id="q" background="http://s1.bwallpapers.com/wallpapers/2014/02/11/violet-color-background_092209769.jpg">
+<br>
+<div id="a">
+    <h4 align="right"><a id = "a" routerLink="/signin">User login click here&nbsp;</a></h4>
+  <h4 align="right"><a id = "a" routerLink="/mlogin">Mentor login click here &nbsp;</a></h4>
+</div>
+
+
+<!--<div class="container text-center">-->
+ 
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <form >
+        <br>
+        <h3 align="center">Login for Admin</h3>
+        <img src="assets/logo.jpg">
+        <div class="form-group">
+            
+          <input  type="text"  name="usr" id="usr" (input)='usr=$event.target.value' placeholder="  Enter email" style="width:300px; height: 35px;">
+        </div>
+        <div class="form-group">
+            
+          <input  input  type="password" name="pwd" id="pwd" (input)='pwd=$event.target.value'placeholder="  Enter password" style="width:300px; height: 35px;">
+        </div>
+        <br>
+        <div  style="background-color: transparent;">
+          <button align = "center" type="submit" on-click='validate()'class="btn btn-primary" >SignIn</button><span class="psw"><br><br>
+            <a routerLink="/signup"><b>Forgot password?/Signup</b></a></span>
+        </div>
+        
+        <br>
+        <a id="b" routerLink="/signup">New user? click here</a>
+        <br><br>
+      </form>
+    </div>
+    <div class="col-md-1"></div>
+</div>
+
+<br>
+<br>
+<br>
+
+
+
+</body> 
+</html>
+

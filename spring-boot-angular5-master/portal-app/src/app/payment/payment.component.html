@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 100vh;
+      /*background-image: linear-gradient(-90deg, rgb(68, 8, 233), rgb(228, 43, 235));*/
+      /*background-image: linear-gradient(45deg, yellow, #009966, purple);*/
+      background-image: url("https://cdn.pixabay.com/photo/2016/10/22/01/54/wood-1759566_960_720.jpg");
+      /*https://cdn.pixabay.com/photo/2017/03/25/17/55/color-2174045__340.png*/
+      /*https://img4.goodfon.com/wallpaper/nbig/5/53/abstract-colors-colorful-rainbow-background-fon-tsvet-raduga.jpg*/
+      /*https://i.pinimg.com/originals/da/79/ef/da79ef416fb150d86d1a4c3f20055215.jpg*/
+      /*https://www.jakpost.travel/wimages/large/10-103094_gradient-wallpaper-hd-gradient-wallpaper-background-color.jpg*/
+      
+    }
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+table {
+ /* background-color: rgb(10, 5, 36);*/
+ background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+  
+}
+
+th{
+  color: white;
+  text-align: center;
+}
+
+td{
+ /*background-color: rgb(4, 22, 82);*/
+ text-align: center;
+ color: white;
+}
+
+  </style>
+</head>
+<body >
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+        <br>
+        <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+        <br>
+
+
+  <h2>  Payment Details</h2>
+  <br>
+  <hr>
+  
+  <table class="table ">
+      <thead>
+          <tr>
+            <th class="hidden">Id</th>
+             
+            <th>txnType</th>
+            <th>amount</th>
+            <th>remarks</th>
+    
+            <th>mentorId</th>
+            <th>trainingId</th>
+            <th>paymentType</th>
+            <th>User Id</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let payment of payment">
+            <td class="hidden">{{payment.id}}</td>
+            <td>{{payment.txnType}}</td>
+            <td>{{payment.amount}}</td>
+            <td>{{payment.remarks}}</td>
+            <td>{{payment.mentorId}}</td>
+            <td>{{payment.trainingId}}</td>
+            <td>{{payment.paymentType}}</td>
+            <td>{{payment.userId}}</td>
+           
+            
+          
+          </tr>
+          </tbody>
+  </table>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+  </div>
+  </body>
+  </html>
+
+
+
+
+
+
+
+

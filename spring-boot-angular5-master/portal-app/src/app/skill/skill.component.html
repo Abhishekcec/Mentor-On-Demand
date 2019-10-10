@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: 100%;
+      /*background-image: linear-gradient(-90deg, rgb(68, 8, 233), rgb(228, 43, 235));*/
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      background-image: url("https://cdn.pixabay.com/photo/2016/10/22/01/54/wood-1759566_960_720.jpg");
+      
+    }
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+table {
+  /*background-color: rgb(228, 72, 72);*/
+  /*background-image: url("https://www.jakpost.travel/wimages/large/10-103094_gradient-wallpaper-hd-gradient-wallpaper-background-color.jpg");*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  font-size: 17px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th{
+  color: white;
+  text-align: center;
+}
+
+td{
+ /*background-color: rgb(57, 90, 201);*/
+ color: white;
+}
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" text-center">
+    
+        <br>
+        <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+        <br>
+
+
+  <h2>  Skill Details</h2>
+  <br>
+  <hr>
+  <div class = "container" style="overflow-x: auto;">
+  <table class="table ">
+      <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Prerequisites</th>
+            <th>TOC</th>
+            <th>Created At</th>
+            <th>Updated At</th>
+            <th>Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let skill of skill">
+            <td>{{skill.id}}</td>
+            <td>{{skill.name}}</td>
+            <td>{{skill.prerequisites}}</td>
+            <td>{{skill.toc}}</td>
+            <td>{{skill.createdAt | date}}</td>
+            <td>{{skill.updatedAt | date}}</td>
+            <td><button class="btn btn-danger" (click)="deleteSkill(skill)"> Delete Skill</button></td>
+          </tr>
+          </tbody>
+  </table>
+  </div>
+  <br>
+  <br>
+  <br>
+  <hr>
+
+  </div>
+  </body>
+  </html>
+
+
+
+

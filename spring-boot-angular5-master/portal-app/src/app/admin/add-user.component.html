@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: fixed;
+      /*background-image: linear-gradient(to right, yellow, #009966, purple);*/
+      /*background-image: url("https://backgroundcheckall.com/wp-content/uploads/2017/12/best-background-color-6.jpg");*/
+      /*background-image: url("https://d2v9y0dukr6mq2.cloudfront.net/video/thumbnail/HPWsSXb4xiwrj8lkx/videoblocks-tropical-beach-background-loop_bhjouqunm_thumbnail-full01.png");*/
+      background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+      /*background-image: url("https://c8.alamy.com/comp/PHW6P6/abstract-unfocused-and-soft-background-for-design-path-in-the-woods-magical-autumn-forest-blur-technique-PHW6P6.jpg")*/
+      
+    }
+  
+ 
+
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+
+#login{
+  width:600px;
+  height: 800px;
+  /*background-color: rgb(204, 189, 206);*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class = "container text-center" id="login">
+      <h2 class="text-center">Add User</h2>
+  <form >
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" [(ngModel)]="user.email" placeholder="Email" name="email" class="form-control" id="email">
+    </div>
+
+    <div class="form-group">
+      <label for="firstName">First Name:</label>
+      <input [(ngModel)]="user.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name:</label>
+      <input [(ngModel)]="user.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+    </div>
+
+    <div class="form-group">
+      <label for="userName">User Name:</label>
+      <input [(ngModel)]="user.userName" placeholder="User Name" name="userName" class="form-control" id="userName">
+    </div>
+    <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" [(ngModel)]="user.password" placeholder="password" name="password" class="form-control" id="password">
+    </div>
+
+    <div class="form-group">
+        <label for="contactNumber">Contact No:</label>
+        <input type="tel" [(ngModel)]="user.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+    </div>
+
+    <div class="form-group">
+        <label for="regCode">Reg. Code</label>
+        <input type="text" [(ngModel)]="user.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode">
+    </div>
+
+    <div class="form-group">
+        <label for="role">Role</label>
+        <input type="text" [(ngModel)]="user.role" placeholder="Role " name="role" class="form-control" id="role">
+    </div>
+
+    <div class="form-group">
+        <label for="linkedinUrl">LinkedIn Url</label>
+        <input type="text" [(ngModel)]="user.linkedinUrl" placeholder="linkedinUrl " name="linkedinUrl" class="form-control" id="linkedinUrl">
+    </div>
+
+    <div class="form-group">
+        <label for="yearsofExperience">Years of Experience</label>
+        <input type="text" [(ngModel)]="user.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" class="form-control" id="yearsofExperience">
+    </div>
+
+    <button class="btn btn-success" (click)="createUser()">Create</button>
+  </form>
+  </div>
+</div>
+</body>
+</html>

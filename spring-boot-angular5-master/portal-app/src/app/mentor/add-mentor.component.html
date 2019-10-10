@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Users</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    body{
+      background-repeat: no-repeat;
+      background-size: 200%;
+     /* background-image: linear-gradient(to right, yellow, #009966, purple);*/
+     background-image: url("https://wallpaper-gallery.net/images/background-pictures/background-pictures-1.jpg");
+       
+    }
+  
+ 
+
+    h1{
+      color: white;
+    }
+    h2{
+      color: white;
+    }
+    .container{
+      color: white;
+    }
+    a{
+      color: white;
+    }
+    
+div.content {
+ 
+  height: 1000px;
+}
+input{
+  text-align: center;
+}
+
+th{
+  color: white;
+}
+
+td{
+  color: white;
+}
+label{
+  color: white;
+}
+
+#login{
+  width:500px;
+  
+  /*background-color: rgb(200, 192, 201);*/
+  /*background-image: url("https://www.jakpost.travel/wimages/large/10-103094_gradient-wallpaper-hd-gradient-wallpaper-background-color.jpg");*/
+  background-image: url("http://imgsnap.com/images/2016/09/14/main-background1.jpg");
+ 
+  border: 1px;
+}
+
+
+  </style>
+</head>
+<body background="https://hdqwalls.com/download/rainbow-blur-abstract-5k-x2-1366x768.jpg">
+  <h4><a href="javascript:history.back()">Back</a></h4>
+
+<div class=" container text-center">
+    
+  <br>
+  <h1 align = "center">Welcome to Mentor-on-Demand</h1>
+  <br>
+  
+  <div class="container text-center" id="login">
+    <div class="col-md-1"></div>
+    <div class = "col-md-10" >
+      <h2 style="color: white;" class="text-center">Add Mentor</h2>
+      <form>
+          <div class="form-group">
+            
+            <input type="email" [(ngModel)]="mentor.email" placeholder="Email" name="email" class="form-control" id="email">
+          </div>
+        
+          <div class="form-group">
+            
+            <input [(ngModel)]="mentor.firstName" placeholder="First Name" name="firstName" class="form-control" id="firstName">
+          </div>
+        
+          <div class="form-group">
+            
+            <input [(ngModel)]="mentor.lastName" placeholder="Last name" name="lastName" class="form-control" id="lastName">
+          </div>
+        
+          <div class="form-group">
+             
+              <input type="password" [(ngModel)]="mentor.password" placeholder="password" name="password" class="form-control" id="password">
+          </div>
+        
+          <div class="form-group">
+              
+              <input type="tel" [(ngModel)]="mentor.contactNumber" placeholder="Contact Number" name="contactNumber" class="form-control" id="contactNumber">
+          </div>
+        
+          <div class="form-group">
+              
+              <input type="text" [(ngModel)]="mentor.regCode" placeholder="Registration Code" name="regCode" class="form-control" id="regCode">
+          </div>
+        
+          <div class="form-group">
+              
+              <input type="text" [(ngModel)]="mentor.role" placeholder="Role " name="role" class="form-control" id="role">
+          </div>
+        
+          <div class="form-group">
+              
+              <input type="text" [(ngModel)]="mentor.linkedinUrl" placeholder="linkedinUrl " name="linkedinUrl" class="form-control" id="linkedinUrl">
+          </div>
+        
+          <div class="form-group">
+              
+              <input type="text" [(ngModel)]="mentor.yearsofExperience" placeholder="0,1,2 etc. " name="yearsofExperience" class="form-control" id="yearsofExperience">
+          </div>
+        
+          <div class="form-group">
+           
+            <input type="text" [(ngModel)]="mentor.firstName" placeholder="Rating" name="rating" class="form-control" id="rating">
+          </div>
+        
+          <div class="form-group">
+            
+            <input type="text" [(ngModel)]="mentor.timeZone" placeholder="Time Zone" name="timeZone" class="form-control" id="timeZone">
+          </div>
+        
+          <div class="form-group">
+            
+            <input type="text" [(ngModel)]="mentor.mentorProfile" placeholder="Mentor Profile" name="mentorProfile" class="form-control" id="mentorProfile">
+          </div>
+          <button class="btn btn-success" (click)="createMentor()">Create</button>
+          <br><br>
+        </form>
+  </div>
+  </div>
+</div>
+<footer class="page-footer font-small special-color-dark pt-4">
+
+ 
+  <div class="footer-copyright text-center py-3">© 2019 Copyright:
+    <a routerLink="/index"> MentorOnDemand.com</a>
+  </div>
+ 
+
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
